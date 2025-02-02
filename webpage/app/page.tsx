@@ -8,12 +8,11 @@ export default function Home() {
         <Image 
           src={"/banner.jpg"}
           alt="background"
-          layout='fill'
-
+          fill={true}
           quality={100}
           className="background"
         />
-        <h1 className="text-white">Welcome to my page!</h1>
+        <h1 className="text-white drop-shadow">MIKEZAY</h1>
         <iframe src="https://www.youtube.com/embed/DQDaSLIRsKI" allowFullScreen width="800" height="450"/>
       </div>
     </div>
