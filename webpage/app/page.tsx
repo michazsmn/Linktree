@@ -5,10 +5,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 import '@geist-ui/core'
 import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+
+
 
 export default function Home() {
   return (
@@ -25,19 +33,24 @@ export default function Home() {
 
         <h1 className="text-white drop-shadow text-7xl">MIKEZAY</h1>
 
-        <Collapsible>
-          <CollapsibleTrigger className='button-72'>Youtube</CollapsibleTrigger>
-          <CollapsibleContent>
-            <iframe src="https://www.youtube.com/embed/DQDaSLIRsKI" allowFullScreen width="800" height="450"/>
-          </CollapsibleContent>
-        </Collapsible>
+        <Popover>
+          <PopoverTrigger className='button-72'>Youtube</PopoverTrigger>
+          <PopoverContent>
+            <div className='justify-items-center'>
+                    <iframe src="https://www.youtube.com/embed/DQDaSLIRsKI" width="800" height="450"/>
+            </div>
+          </PopoverContent>
+        </Popover>
 
-        <Collapsible>
-          <CollapsibleTrigger className='button-72'>Spotify</CollapsibleTrigger>
-          <CollapsibleContent>
-          <iframe src="https://open.spotify.com/embed/artist/5b5IWd6FFzq9Ij6etGsktH?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </CollapsibleContent>
-        </Collapsible>
+        <Popover>
+          <PopoverTrigger className='button-72'>Spotify</PopoverTrigger>
+          <PopoverContent>
+            <div>
+              <iframe src="https://open.spotify.com/embed/artist/5b5IWd6FFzq9Ij6etGsktH?utm_source=generator" width="100%" height="352" 
+                  frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </PopoverContent>
+        </Popover>
 
         <Link href="https://www.instagram.com/micha_zsmn/" className='button-72'>Instagram</Link>
 
